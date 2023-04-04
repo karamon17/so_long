@@ -17,7 +17,25 @@
 
 void player_pos(t_game *gm)
 {
+	int	i;
+	int	j;
 
+	i = 0;
+	while (gm->map[i])
+	{
+		j = 0;
+		while (gm->map[i][j])
+		{
+			if (gm->map[i][j] == 'P')
+			{
+				gm->x = i;
+				gm->y = j;
+				return ;
+			}
+			j++;
+		}
+		i++;
+	}
 }
 
 void init_image(t_game *gm)

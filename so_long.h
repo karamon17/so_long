@@ -16,12 +16,6 @@
 # include <stdlib.h>
 # include <fcntl.h>
 
-typedef struct s_player
-{
-	int x;
-	int y;
-}				t_player;
-
 typedef struct game
 {
 	void	*start;
@@ -35,7 +29,8 @@ typedef struct game
 	int		w_field;
 	int		h_field;
 	char	**map;
-	t_player player;
+	int		x;
+	int		y;
 }					t_game;
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);

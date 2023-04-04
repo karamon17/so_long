@@ -17,94 +17,31 @@
 
 void	move_left(t_game *gm)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	while (gm->map[i])
-	{
-		j = 0;
-		while (gm->map[i][j])
-		{
-			if (gm->map[i][j] == 'P')
-			{
-				gm->map[i][j - 1] = 'P';
-				gm->map[i][j] = '0';
-				return ;
-			}
-			j++;
-		}
-		i++;
-	}
+	player_pos(gm);
+	gm->map[gm->x][gm->y - 1] = 'P';
+	gm->map[gm->x][gm->y] = '0';
 }
 
 void	move_right(t_game *gm)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	while (gm->map[i])
-	{
-		j = 0;
-		while (gm->map[i][j])
-		{
-			if (gm->map[i][j] == 'P')
-			{
-				gm->map[i][j + 1] = 'P';
-				gm->map[i][j] = '0';
-				return ;
-			}
-			j++;
-		}
-		i++;
-	}
+	player_pos(gm);
+	gm->map[gm->x][gm->y + 1] = 'P';
+	gm->map[gm->x][gm->y] = '0';
 }
 
 void	move_up(t_game *gm)
 {
-	int	i;
-	int	j;
+	player_pos(gm);
+	gm->map[gm->x - 1][gm->y] = 'P';
+	gm->map[gm->x][gm->y] = '0';
 
-	i = 0;
-	while (gm->map[i])
-	{
-		j = 0;
-		while (gm->map[i][j])
-		{
-			if (gm->map[i][j] == 'P')
-			{
-				gm->map[i - 1][j] = 'P';
-				gm->map[i][j] = '0';
-				return ;
-			}
-			j++;
-		}
-		i++;
-	}
 }
 
 void	move_down(t_game *gm)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	while (gm->map[i])
-	{
-		j = 0;
-		while (gm->map[i][j])
-		{
-			if (gm->map[i][j] == 'P')
-			{
-				gm->map[i + 1][j] = 'P';
-				gm->map[i][j] = '0';
-				return ;
-			}
-			j++;
-		}
-		i++;
-	}
+	player_pos(gm);
+	gm->map[gm->x + 1][gm->y] = 'P';
+	gm->map[gm->x][gm->y] = '0';
 }
 
 void	exit_game()
