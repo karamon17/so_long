@@ -74,7 +74,8 @@ void	ft_image(t_game *gm)
 
 int handle_key_press(int keycode, t_game *gm)
 {
-    if (keycode == 13) // 'W' key
+    player_pos(gm);
+	if (keycode == 13) // 'W' key
 		move_up(gm);
 	else if (keycode == 0) // 'A' key
 		move_left(gm);
@@ -84,6 +85,7 @@ int handle_key_press(int keycode, t_game *gm)
 		move_right(gm);
 	else if (keycode == 53)
 		exit_game();
+	gm->map[gm->x][gm->y] = '0';
 	ft_image(gm);
     return (0);
 }
