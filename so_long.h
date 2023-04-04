@@ -20,7 +20,7 @@ typedef struct s_player
 {
 	int x;
 	int y;
-}t_player;
+}				t_player;
 
 typedef struct game
 {
@@ -34,16 +34,9 @@ typedef struct game
 	int		hei;
 	int		w_field;
 	int		h_field;
-	int		x;
-	int		y;
 	char	**map;
 	t_player player;
 }					t_game;
-
-// typedef struct map
-// {
-// 	char	**map;
-// }					t_map;
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	**ft_split(char const *s, char c);
@@ -52,12 +45,13 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	ft_visualization(t_game *gm);
 void	ft_image(t_game *gm);
-void	move_left(char ***map);
-void	move_right(char ***map);
-// void	move_up(t_map *smap);
-void	move_down(char ***map);
+void	move_left(t_game *gm);
+void	move_right(t_game *gm);
+void	move_up(t_game *gm);
+void	move_down(t_game *gm);
 void	exit_game();
-int handle_key_press(int keycode, t_game *gm);
-void init_image(t_game *gm);
+int		handle_key_press(int keycode, t_game *gm);
+void	init_image(t_game *gm);
+void	player_pos(t_game *gm);
 
 #endif
