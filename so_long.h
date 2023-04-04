@@ -50,7 +50,10 @@ void	init_image(t_game *gm);
 void	player_pos(t_game *gm);
 void	player_pos(t_game *gm);
 void	check_border(t_game *gm);
-void	check_rectangular(t_game *gm);
+void	check_rectangular_coins(t_game *gm);
 void	check_symbol(t_game *gm);
+int		check_coin(t_game *gm);
+int		is_path_exists(char **map, int x, int y);
+void	check_path(char *str, t_game *gm);
 
 #endif

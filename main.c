@@ -14,6 +14,14 @@
 #include "get_next_line.h"
 #include <stdio.h>
 
+void	continuation(t_game *gm)
+{
+	check_symbol(gm);
+	check_rectangular_coins(gm);
+	check_border(gm);
+	player_pos(gm);
+}
+
 int	main(int argc, char **argv)
 {
 	int		fd;
@@ -36,8 +44,7 @@ int	main(int argc, char **argv)
 		line = get_next_line(fd);
 	}
 	gm.map = ft_split(str, '\n');
-	check_symbol(&gm);
-	check_rectangular(&gm);
-	check_border(&gm);
+	continuation(&gm);
+	check_path(str, &gm);
 	ft_visualization(&gm);
 }
