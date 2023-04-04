@@ -36,5 +36,8 @@ int	main(int argc, char **argv)
 		line = get_next_line(fd);
 	}
 	gm.map = ft_split(str, '\n');
+	check_symbol(&gm);
+	check_rectangular(&gm);
+	check_border(&gm);
 	ft_visualization(&gm);
 }

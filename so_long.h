@@ -44,9 +44,13 @@ void	move_left(t_game *gm);
 void	move_right(t_game *gm);
 void	move_up(t_game *gm);
 void	move_down(t_game *gm);
-void	exit_game();
+void	exit_game(void);
 int		handle_key_press(int keycode, t_game *gm);
 void	init_image(t_game *gm);
 void	player_pos(t_game *gm);
+void	player_pos(t_game *gm);
+void	check_border(t_game *gm);
+void	check_rectangular(t_game *gm);
+void	check_symbol(t_game *gm);
 
 #endif
