@@ -16,16 +16,20 @@ SRCS = $(wildcard *.c)
 
 OBJS = $(SRCS:.c=.o)
 
-FLAGS = #-Wall -Wextra -Werror
+HEADER = so_long.h
+
+HEADER_GNL = get_next_line.h
+
+FLAGS = -Wall -Wextra -Werror
 
 LIBS = -lmlx -framework OpenGL -framework AppKit
 
 all: $(NAME)
 
-%.o: %.c
+%.o: %.c $(HEADER) $(HEADER_GNL)
 	cc $(FLAGS) -c $< -o $@
 
-$(NAME): $(OBJS)
+$(NAME): $(HEADER) $(HEADER_GNL) $(OBJS)
 	cc $(FLAGS) $(OBJS) $(LIBS) -o $(NAME)
 
 clean:

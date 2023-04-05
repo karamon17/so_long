@@ -79,10 +79,10 @@ void	check_border(t_game *gm)
 
 void	check_rectangular_coins(t_game *gm)
 {
-	int	j;
-	int	len;
-	int	i;
-	int	count_c;
+	int		j;
+	size_t	len;
+	int		i;
+	int		count_c;
 
 	len = ft_strlen(gm->map[0]);
 	j = 0;
