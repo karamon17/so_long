@@ -17,7 +17,7 @@
 
 void	move_up(t_game *gm)
 {
-	if (gm->map[gm->x - 1][gm->y] == 'E' && check_coin(gm))
+	if (gm->map[gm->x - 1][gm->y] == 'E' && check_coin(gm->map))
 	{
 		write(1, "You win!\n", 9);
 		exit(0);
@@ -31,7 +31,7 @@ void	move_up(t_game *gm)
 
 void	move_down(t_game *gm)
 {
-	if (gm->map[gm->x + 1][gm->y] == 'E' && check_coin(gm))
+	if (gm->map[gm->x + 1][gm->y] == 'E' && check_coin(gm->map))
 	{
 		write(1, "You win!\n", 9);
 		exit(0);
@@ -45,7 +45,7 @@ void	move_down(t_game *gm)
 
 void	move_left(t_game *gm)
 {
-	if (gm->map[gm->x][gm->y - 1] == 'E' && check_coin(gm))
+	if (gm->map[gm->x][gm->y - 1] == 'E' && check_coin(gm->map))
 	{
 		write(1, "You win!\n", 9);
 		exit(0);
@@ -59,7 +59,7 @@ void	move_left(t_game *gm)
 
 void	move_right(t_game *gm)
 {
-	if (gm->map[gm->x][gm->y + 1] == 'E' && check_coin(gm))
+	if (gm->map[gm->x][gm->y + 1] == 'E' && check_coin(gm->map))
 	{
 		write(1, "You win!\n", 9);
 		exit(0);
