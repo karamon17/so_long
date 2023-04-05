@@ -31,6 +31,7 @@ typedef struct game
 	char	**map;
 	int		x;
 	int		y;
+	int		moves;
 }					t_game;
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -55,5 +56,6 @@ void	check_symbol(t_game *gm);
 int		check_coin(char **map);
 int		is_path_exists(char **map, int x, int y);
 void	check_path(char *str, t_game *gm);
+int		loop_hook(t_game *gm);
 
 #endif

@@ -26,6 +26,7 @@ void	move_up(t_game *gm)
 	{
 		gm->map[gm->x - 1][gm->y] = 'P';
 		gm->map[gm->x][gm->y] = '0';
+		gm->moves++;
 	}
 }
 
@@ -40,6 +41,7 @@ void	move_down(t_game *gm)
 	{
 		gm->map[gm->x + 1][gm->y] = 'P';
 		gm->map[gm->x][gm->y] = '0';
+		gm->moves++;
 	}
 }
 
@@ -54,6 +56,7 @@ void	move_left(t_game *gm)
 	{
 		gm->map[gm->x][gm->y - 1] = 'P';
 		gm->map[gm->x][gm->y] = '0';
+		gm->moves++;
 	}
 }
 
@@ -68,6 +71,7 @@ void	move_right(t_game *gm)
 	{
 		gm->map[gm->x][gm->y + 1] = 'P';
 		gm->map[gm->x][gm->y] = '0';
+		gm->moves++;
 	}
 }
 

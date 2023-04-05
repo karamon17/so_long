@@ -13,7 +13,6 @@
 #include <mlx.h>
 #include "so_long.h"
 #include "get_next_line.h"
-#include <stdio.h>
 
 void	init_image(t_game *gm)
 {
@@ -25,6 +24,7 @@ void	init_image(t_game *gm)
 		"wall.xpm", &gm->wid, &gm->hei);
 	gm->heart = mlx_xpm_file_to_image(gm->mlx, \
 		"heart.xpm", &gm->wid, &gm->hei);
+	gm->moves = 0;
 }
 
 void	ft_image(t_game *gm)
@@ -97,5 +97,6 @@ void	ft_visualization(t_game *gm)
 	ft_image(gm);
 	mlx_hook(gm->win, 2, 0, handle_key_press, gm);
 	mlx_hook(gm->win, 17, 0, handle_close_window, gm);
+	mlx_loop_hook(gm->mlx, loop_hook, gm);
 	mlx_loop(gm->mlx);
 }
