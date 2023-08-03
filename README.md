@@ -73,7 +73,7 @@
 		</td>
 		<td>
 			<table align="center">
-				<h3 align="center">
+				<h3>
 					Map Example
 				</h3>
 				<tr>
@@ -90,7 +90,7 @@
 					</td>
 					<td>
 						<img src="Screen Shot 2023-08-03 at 7.50.27 PM.png"  width="45%">
-						<p align="center">
+						<p>
 							<i>Render in game</i>
 						</p>
 					</td>
