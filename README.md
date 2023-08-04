@@ -108,7 +108,6 @@
 		<li>contain only one starting position</li>
 		<li>contain only one exit door</li>
 		<li>contain at least one collectible</li>
-		<li>contain a maximum of one hammer</li>
 		<li>be composed by only valid characters</li>
 		<li>the file contain map must be at .ber format</li>
 	</ul>
